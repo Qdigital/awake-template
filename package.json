@@ -12,7 +12,9 @@
     "dev": "npm run before-build && nuxt -o && npm run after-build",
     "build": "npm run before-build && nuxt build && npm run after-build",
     "start": "nuxt start",
-    "generate": "npm run before-build && nuxt generate && npm run after-build"
+    "generate": "npm run before-build && nuxt generate && npm run after-build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -46,7 +48,8 @@
     "showdown": "^1.9.1",
     "url-parse": "^1.4.7",
     "v-runtime-template": "^1.10.0",
-    "vue-disqus": "^3.0.5"
+    "vue-disqus": "^3.0.5",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
@@ -76,5 +79,6 @@
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "snyk": true
 }
